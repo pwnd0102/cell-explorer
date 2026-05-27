@@ -91,18 +91,12 @@ body { font-family: 'Sarabun', 'Prompt', -apple-system, 'Segoe UI', sans-serif; 
 
 <div class="toast" id="toast"></div>
 
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-  }
-}
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
-<script type="module">
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+<script>
+const THREE = window.THREE;
+const OrbitControls = THREE.OrbitControls;
 
 const DATA = {
   animal: {
@@ -110,7 +104,7 @@ const DATA = {
       name: "นิวเคลียส", pronounce: "นิว-เคลียส", en: "Nucleus",
       icon: "🧠",
       color: "#6c5ce7",
-      func: "เป็นศูนย์กลางควบคุมการทำงานของเซลล์ บรรจุสารพันธุกรรม (DNA) ควบคุมการสังเคราะห์โปรตีน การแบ่งเซลล์ และเมแทบอลิซึมทั้งหมดของเซลล์ เปรียบเสมือน "สมอง" ของเซลล์",
+      func: "เป็นศูนย์กลางควบคุมการทำงานของเซลล์ บรรจุสารพันธุกรรม (DNA) ควบคุมการสังเคราะห์โปรตีน การแบ่งเซลล์ และเมแทบอลิซึมทั้งหมดของเซลล์ เปรียบเสมือน 'สมอง' ของเซลล์",
       struct: "มีเยื่อหุ้ม 2 ชั้น (nuclear envelope) มีรูพรุนให้สารผ่านเข้าออก ภายในบรรจุโครมาติน (DNA + โปรตีน) และนิวคลีโอลัส น้ำนิวเคลียส (nucleoplasm) มีลักษณะเป็นเจล",
       fact: "นิวเคลียสมีขนาดประมาณ 10-20 ไมโครเมตร สัดส่วนประมาณ 10% ของปริมาตรเซลล์ มนุษย์มี DNA ยาวประมาณ 2 เมตรเมื่อคลายเกลียว แต่อัดอยู่ในนิวเคลียสขนาดเล็กมาก!"
     },
